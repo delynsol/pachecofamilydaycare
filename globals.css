@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* Colores de la página: cámbialos aquí y cambian en todo el sitio */
+:root {
+  /* Colores tomados de la tarjeta de presentación */
+  --morado: #8761fc;
+  --azul: #778ff4;
+  --turquesa: #4fcfe0;
+  --menta: #c4efee;
+  --sol: #fbda3c;
+  --crema: #faf6f1;
+  --blanco: #fff;
+  --texto: #4a4a4a;
+  --suave: #6b6b6b;
+  --degradado: linear-gradient(90deg, var(--morado), var(--azul), var(--turquesa));
+  --radio: 18px;
+  --sombra: 0 8px 24px rgba(135, 97, 252, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body { font-family: "Montserrat", sans-serif; color: var(--texto); background: var(--crema); line-height: 1.6; }
+h1, h2, h3 { font-family: "Fira Sans Condensed", sans-serif; color: var(--texto); line-height: 1.2; }
+h1, h2 { background: var(--degradado); -webkit-background-clip: text; background-clip: text; color: transparent; }
+a { color: var(--morado); }
+.contenedor { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.oculto { display: none; }
+
+/* ===== MENÚ ===== */
+header { position: sticky; top: 0; z-index: 10; background: var(--blanco); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06); }
+.menu { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.logo { display: flex; align-items: center; gap: 10px; font-family: "Fira Sans Condensed"; font-weight: 700; font-size: 1.35rem; color: var(--morado); text-decoration: none; }
+.logo .icono { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--sol); font-size: 1.4rem; }
+nav ul { display: flex; gap: 22px; list-style: none; }
+nav a { text-decoration: none; color: var(--texto); font-weight: 600; }
+nav a:hover { color: var(--morado); }
+.boton-menu { display: none; background: none; border: 0; font-size: 1.8rem; cursor: pointer; color: var(--morado); }
+
+/* ===== PORTADA ===== */
+.portada { background: radial-gradient(circle at 75% 60%, var(--menta) 0 38%, transparent 39%), var(--crema); padding: 60px 0 80px; }
+.portada .contenedor { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center; }
+.portada h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+.portada p { font-size: 1.1rem; margin: 14px 0 26px; color: var(--texto); }
+.tarjeta { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 16px 40px rgba(135, 97, 252, 0.22); }
+
+.btn { display: inline-block; padding: 13px 26px; border-radius: 999px; font-weight: 700; text-decoration: none; border: 0; cursor: pointer; font-size: 1rem; font-family: inherit; }
+.btn-principal { background: var(--degradado); color: #fff; }
+.btn-principal:hover { filter: brightness(1.07); }
+.btn-secundario { background: #fff; color: var(--morado); border: 2px solid var(--menta); margin-left: 8px; }
+
+section { padding: 70px 0; }
+.titulo-seccion { text-align: center; margin-bottom: 36px; }
+.titulo-seccion.izquierda { text-align: left; }
+.titulo-seccion h2 { font-size: 2.1rem; }
+.titulo-seccion p { color: var(--suave); }
+
+/* ===== ANUNCIOS ===== */
+.anuncios { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.anuncio { background: var(--blanco); border-radius: var(--radio); padding: 22px; box-shadow: var(--sombra); border-top: 6px solid var(--sol); }
+.anuncio.importante { border-top-color: var(--morado); }
+
+/* Efemérides: tarjeta a todo el ancho con sus etapas */
+.anuncio.efemeride { grid-column: 1 / -1; border-top-color: var(--turquesa); padding: 28px; }
+.anuncio.efemeride h3 { font-size: 1.6rem; }
+.etiqueta.efemeride { background: var(--menta); color: #157a87; }
+.etapas { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 18px 0; }
+.etapas > li { background: var(--crema); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.etapas > li:nth-child(5n + 1) { border-top: 5px solid var(--sol); }
+.etapas > li:nth-child(5n + 2) { border-top: 5px solid var(--turquesa); }
+.etapas > li:nth-child(5n + 3) { border-top: 5px solid var(--azul); }
+.etapas > li:nth-child(5n + 4) { border-top: 5px solid var(--morado); }
+.etapas > li:nth-child(5n + 5) { border-top: 5px solid #7fd6a8; }
+.etapa-emoji { font-size: 2.2rem; line-height: 1; }
+.etapas > li > strong { font-family: "Fira Sans Condensed", sans-serif; font-size: 1.25rem; color: var(--morado); }
+.consejos { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.consejos li { display: flex; gap: 8px; align-items: flex-start; font-size: 0.92rem; line-height: 1.4; }
+.consejos .marca { flex: none; font-size: 1rem; }
+.sello { display: inline-block; font-style: normal; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.04em; color: #6a43e0; background: #ece6ff; border-radius: 999px; padding: 0 7px; vertical-align: 1px; }
+.anuncio .cierre { font-weight: 600; color: var(--texto); background: var(--menta); border-radius: 12px; padding: 12px 16px; }
+.anuncio .fuentes { margin-top: 12px; font-size: 0.8rem; color: var(--suave); }
+.anuncio .fecha { font-size: 0.85rem; font-weight: 700; color: var(--azul); }
+.anuncio h3 { margin: 6px 0 8px; font-size: 1.3rem; }
+.etiqueta { display: inline-block; background: #ece6ff; color: #6a43e0; font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; margin-left: 6px; }
+
+/* ===== NOSOTROS ===== */
+.blanco { background: var(--blanco); }
+.servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.servicio { background: var(--menta); border-radius: var(--radio); padding: 24px; text-align: center; }
+.servicio .emoji { font-size: 2.6rem; }
+.servicio h3 { margin: 8px 0 6px; }
+
+/* ===== INFORMACIÓN ===== */
+.info { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.tarjeta-info { background: var(--blanco); border-radius: var(--radio); padding: 24px; box-shadow: var(--sombra); }
+.tarjeta-info h3 { margin-bottom: 8px; }
+.tarjeta-info ul { list-style: none; }
+.tarjeta-info li { padding: 4px 0; border-bottom: 1px dashed #e5e9ee; }
+.tarjeta-info li:last-child { border: 0; }
+
+/* ===== AYUDA ===== */
+.preguntas { max-width: 760px; margin: 0 auto; }
+details { background: var(--crema); border-left: 5px solid var(--turquesa); border-radius: 14px; margin-bottom: 12px; padding: 16px 20px; }
+summary { cursor: pointer; font-weight: 700; color: var(--texto); list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-size: 1.4rem; color: var(--morado); line-height: 1; }
+details[open] summary::after { content: "–"; }
+details p { margin-top: 10px; }
+
+/* ===== CONTACTO ===== */
+.contacto { display: grid; grid-template-columns: 1fr 1.3fr; gap: 30px; align-items: start; }
+form { background: var(--blanco); padding: 28px; border-radius: var(--radio); box-shadow: var(--sombra); }
+label { display: block; font-weight: 700; margin: 12px 0 6px; }
+input, select, textarea { width: 100%; padding: 12px 14px; border: 2px solid #dbe4ec; border-radius: 12px; font: inherit; background: #fbfdff; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--azul); }
+textarea { min-height: 130px; resize: vertical; }
+form .btn { margin-top: 18px; width: 100%; }
+.whatsapp { background: #25d366; color: #fff; margin-top: 16px; }
+
+footer { background: var(--degradado); color: #fff; text-align: center; padding: 28px 0; font-size: 0.95rem; }
+
+/* ===== CELULAR ===== */
+@media (max-width: 800px) {
+  .portada .contenedor, .contacto { grid-template-columns: 1fr; }
+  .boton-menu { display: block; }
+  nav ul { display: none; position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; background: #fff; padding: 16px 20px; gap: 14px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); }
+  nav ul.abierto { display: flex; }
+  .btn-secundario { margin: 10px 0 0; }
+}

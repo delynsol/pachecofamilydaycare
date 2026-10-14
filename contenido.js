@@ -29,8 +29,95 @@ export const daycare = {
 //  ANUNCIOS — el primero de la lista aparece primero en la página.
 //  Para agregar uno, copia un bloque { ... }, pégalo arriba y cámbialo.
 //  importante: true  -> muestra la etiqueta morada "Importante"
+//  efemeride: true   -> muestra la etiqueta "Efeméride" y la tarjeta
+//                       ocupa todo el ancho. Puede llevar una lista
+//                       de "etapas" (cada una con emoji, edad y consejos)
+//                       y una lista de "fuentes" con enlaces.
+//  En cada consejo:  si: true -> ✅ (recomendado)   si: false -> 🚫 (evitar)
 // ---------------------------------------------------------------------
 export const anuncios = [
+  {
+    fecha: "16 de octubre, 2026",
+    titulo: "🌎 Día Mundial de la Alimentación",
+    texto:
+      "Comer bien ayuda a crecer, aprender y jugar. Esto es lo más importante para cada edad, en 1 minuto:",
+    efemeride: true,
+    etapas: [
+      {
+        emoji: "🍼",
+        edad: "0 a 6 meses",
+        consejos: [
+          { si: true, texto: "Solo leche materna o fórmula.", fuente: "AAP" },
+          { si: false, texto: "No necesita agua, jugo ni leche de vaca.", fuente: "AAP" },
+          { si: false, texto: "Nunca fórmula hecha en casa.", fuente: "FDA" },
+        ],
+      },
+      {
+        emoji: "🥣",
+        edad: "6 a 12 meses",
+        consejos: [
+          { si: true, texto: "Primeras comidas cerca de los 6 meses, sin sal.", fuente: "AAP" },
+          { si: true, texto: "Un alimento nuevo a la vez.", fuente: "AAP" },
+          { si: true, texto: "Comidas con hierro: carnes o cereal fortificado.", fuente: "FDA" },
+          { si: false, texto: "Nada de jugo antes del año.", fuente: "AAP" },
+        ],
+      },
+      {
+        emoji: "🧒",
+        edad: "1 a 3 años",
+        consejos: [
+          { si: true, texto: "Agua y leche entera (hasta los 2 años).", fuente: "AAP" },
+          { si: true, texto: "Pescado bajo en mercurio, 2 veces por semana.", fuente: "FDA" },
+          { si: false, texto: "Jugo: máximo 4 onzas al día. Mejor la fruta.", fuente: "AAP" },
+          { si: false, texto: "Uvas y salchichas siempre picaditas (hasta los 4 años).", fuente: "AAP" },
+        ],
+      },
+      {
+        emoji: "🍎",
+        edad: "4 a 6 años",
+        consejos: [
+          { si: true, texto: "El agua es la mejor bebida en todas las comidas.", fuente: "AAP" },
+          { si: true, texto: "Plato variado: frutas, vegetales, granos y proteínas.", fuente: "FDA" },
+          { si: false, texto: "Jugo: máximo 4 a 6 onzas al día.", fuente: "AAP" },
+        ],
+      },
+      {
+        emoji: "🎒",
+        edad: "7 a 13 años",
+        consejos: [
+          { si: true, texto: "Pescado bajo en mercurio, 2 veces por semana.", fuente: "FDA" },
+          { si: false, texto: "Jugo: máximo 1 taza (8 onzas) al día.", fuente: "AAP" },
+          { si: false, texto: "Nada de bebidas energéticas ni refrescos.", fuente: "AAP" },
+        ],
+      },
+    ],
+    cierre:
+      "En Pacheco Family Day Care servimos meriendas y almuerzos balanceados. ¿Dudas sobre la alimentación de su niño? Consulte a su pediatra. 🥕🍌🥦",
+    fuentes: [
+      {
+        nombre: "AAP: Bebidas sanas por edad",
+        url: "https://downloads.aap.org/dochw/dshp/Healthy%20Beverage%20Quick%20Reference%20Guide_Updated_9.1.23.pdf",
+      },
+      {
+        nombre: "AAP: Jugo de frutas",
+        url: "https://www.healthychildren.org/English/news/Pages/AAP-Recommends-No-Fruit-Juice-For-Children-Under-1-Year.aspx",
+      },
+      {
+        nombre: "AAP: Primeras comidas",
+        url: "https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/Starting-Solid-Foods.aspx",
+      },
+      {
+        nombre: "AAP: Prevenir atragantamientos",
+        url: "https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/Choking-Prevention.aspx",
+      },
+      { nombre: "FDA: Consejos sobre pescado", url: "https://www.fda.gov/food/consumers/advice-about-eating-fish" },
+      {
+        nombre: "FDA: Alimentación de bebés y niños pequeños",
+        url: "https://www.fda.gov/food/hfp-constituent-updates/fda-shares-action-plan-reducing-exposure-toxic-elements-foods-babies-and-young-children",
+      },
+    ],
+    importante: false,
+  },
   {
     fecha: "15 de octubre, 2026",
     titulo: "Inscripciones abiertas",

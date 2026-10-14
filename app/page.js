@@ -36,11 +36,50 @@ export default function Inicio() {
           </div>
           <div className="anuncios">
             {anuncios.map((a, i) => (
-              <article key={i} className={a.importante ? "anuncio importante" : "anuncio"}>
+              <article
+                key={i}
+                className={["anuncio", a.importante && "importante", a.efemeride && "efemeride"]
+                  .filter(Boolean)
+                  .join(" ")}
+              >
                 <span className="fecha">{a.fecha}</span>
                 {a.importante && <span className="etiqueta">Importante</span>}
+                {a.efemeride && <span className="etiqueta efemeride">Efeméride</span>}
                 <h3>{a.titulo}</h3>
                 <p>{a.texto}</p>
+                {a.etapas && (
+                  <ul className="etapas">
+                    {a.etapas.map((e) => (
+                      <li key={e.edad}>
+                        <span className="etapa-emoji" aria-hidden="true">{e.emoji}</span>
+                        <strong>{e.edad}</strong>
+                        <ul className="consejos">
+                          {e.consejos.map((c) => (
+                            <li key={c.texto} className={c.si ? "si" : "no"}>
+                              <span className="marca" aria-label={c.si ? "Sí" : "Evitar"}>{c.si ? "✅" : "🚫"}</span>
+                              <span>
+                                {c.texto} <em className="sello">{c.fuente}</em>
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {a.cierre && <p className="cierre">{a.cierre}</p>}
+                {a.fuentes && (
+                  <p className="fuentes">
+                    <strong>Fuentes:</strong>{" "}
+                    {a.fuentes.map((f, j) => (
+                      <span key={f.url}>
+                        {j > 0 && " · "}
+                        <a href={f.url} target="_blank" rel="noopener noreferrer">{f.nombre}</a>
+                      </span>
+                    ))}
+                    . AAP = Academia Americana de Pediatría. FDA = Administración de Alimentos y Medicamentos de EE. UU.
+                  </p>
+                )}
               </article>
             ))}
           </div>

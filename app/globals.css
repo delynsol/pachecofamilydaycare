@@ -58,6 +58,26 @@ section { padding: 70px 0; }
 .anuncios { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
 .anuncio { background: var(--blanco); border-radius: var(--radio); padding: 22px; box-shadow: var(--sombra); border-top: 6px solid var(--sol); }
 .anuncio.importante { border-top-color: var(--morado); }
+
+/* Efemérides: tarjeta a todo el ancho con sus etapas */
+.anuncio.efemeride { grid-column: 1 / -1; border-top-color: var(--turquesa); padding: 28px; }
+.anuncio.efemeride h3 { font-size: 1.6rem; }
+.etiqueta.efemeride { background: var(--menta); color: #157a87; }
+.etapas { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 18px 0; }
+.etapas > li { background: var(--crema); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.etapas > li:nth-child(5n + 1) { border-top: 5px solid var(--sol); }
+.etapas > li:nth-child(5n + 2) { border-top: 5px solid var(--turquesa); }
+.etapas > li:nth-child(5n + 3) { border-top: 5px solid var(--azul); }
+.etapas > li:nth-child(5n + 4) { border-top: 5px solid var(--morado); }
+.etapas > li:nth-child(5n + 5) { border-top: 5px solid #7fd6a8; }
+.etapa-emoji { font-size: 2.2rem; line-height: 1; }
+.etapas > li > strong { font-family: "Fira Sans Condensed", sans-serif; font-size: 1.25rem; color: var(--morado); }
+.consejos { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.consejos li { display: flex; gap: 8px; align-items: flex-start; font-size: 0.92rem; line-height: 1.4; }
+.consejos .marca { flex: none; font-size: 1rem; }
+.sello { display: inline-block; font-style: normal; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.04em; color: #6a43e0; background: #ece6ff; border-radius: 999px; padding: 0 7px; vertical-align: 1px; }
+.anuncio .cierre { font-weight: 600; color: var(--texto); background: var(--menta); border-radius: 12px; padding: 12px 16px; }
+.anuncio .fuentes { margin-top: 12px; font-size: 0.8rem; color: var(--suave); }
 .anuncio .fecha { font-size: 0.85rem; font-weight: 700; color: var(--azul); }
 .anuncio h3 { margin: 6px 0 8px; font-size: 1.3rem; }
 .etiqueta { display: inline-block; background: #ece6ff; color: #6a43e0; font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; margin-left: 6px; }

@@ -48,7 +48,7 @@ export const anuncios = [
         edad: "0 a 6 meses",
         consejos: [
           { si: true, texto: "Solo leche materna o fórmula.", fuente: "AAP" },
-          { si: false, texto: "No necesita agua, jugo ni leche de vaca.", fuente: "AAP" },
+          { si: false, texto: "No necesita agua ni leche de vaca.", fuente: "AAP" },
           { si: false, texto: "Nunca fórmula hecha en casa.", fuente: "FDA" },
         ],
       },
@@ -59,7 +59,7 @@ export const anuncios = [
           { si: true, texto: "Primeras comidas cerca de los 6 meses, sin sal.", fuente: "AAP" },
           { si: true, texto: "Un alimento nuevo a la vez.", fuente: "AAP" },
           { si: true, texto: "Comidas con hierro: carnes o cereal fortificado.", fuente: "FDA" },
-          { si: false, texto: "Nada de jugo antes del año.", fuente: "AAP" },
+          { si: true, texto: "Puede probar huevo, yogur y pescado bien cocidos.", fuente: "AAP" },
         ],
       },
       {
@@ -68,7 +68,7 @@ export const anuncios = [
         consejos: [
           { si: true, texto: "Agua y leche entera (hasta los 2 años).", fuente: "AAP" },
           { si: true, texto: "Pescado bajo en mercurio, 2 veces por semana.", fuente: "FDA" },
-          { si: false, texto: "Jugo: máximo 4 onzas al día. Mejor la fruta.", fuente: "AAP" },
+          { si: true, texto: "Fruta entera en trocitos pequeños y blandos.", fuente: "AAP" },
           { si: false, texto: "Uvas y salchichas siempre picaditas (hasta los 4 años).", fuente: "AAP" },
         ],
       },
@@ -78,7 +78,7 @@ export const anuncios = [
         consejos: [
           { si: true, texto: "El agua es la mejor bebida en todas las comidas.", fuente: "AAP" },
           { si: true, texto: "Plato variado: frutas, vegetales, granos y proteínas.", fuente: "FDA" },
-          { si: false, texto: "Jugo: máximo 4 a 6 onzas al día.", fuente: "AAP" },
+          { si: true, texto: "Leche baja en grasa (descremada o 1%).", fuente: "AAP" },
         ],
       },
       {
@@ -86,7 +86,7 @@ export const anuncios = [
         edad: "7 a 13 años",
         consejos: [
           { si: true, texto: "Pescado bajo en mercurio, 2 veces por semana.", fuente: "FDA" },
-          { si: false, texto: "Jugo: máximo 1 taza (8 onzas) al día.", fuente: "AAP" },
+          { si: true, texto: "Frutas enteras: 2 a 2½ tazas al día.", fuente: "AAP" },
           { si: false, texto: "Nada de bebidas energéticas ni refrescos.", fuente: "AAP" },
         ],
       },
@@ -99,7 +99,7 @@ export const anuncios = [
         url: "https://downloads.aap.org/dochw/dshp/Healthy%20Beverage%20Quick%20Reference%20Guide_Updated_9.1.23.pdf",
       },
       {
-        nombre: "AAP: Jugo de frutas",
+        nombre: "AAP: Frutas para cada edad",
         url: "https://www.healthychildren.org/English/news/Pages/AAP-Recommends-No-Fruit-Juice-For-Children-Under-1-Year.aspx",
       },
       {

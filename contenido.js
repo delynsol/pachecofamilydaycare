@@ -21,7 +21,7 @@ export const daycare = {
   whatsapp: "19144464787",
 
   direccion: ["77 Prince St.", "Middletown, NY 10940"],
-  horario: ["Dommingos a viernes: 7:00 a.m. – 6:00 p.m.", "Sábados: cerrado"],
+  horario: ["Domingos a viernes: 7:00 a.m. – 6:00 p.m.", "Sábados: cerrado"],
   edades: ["Desde 6 semanas hasta 13 años"],
 };
 
